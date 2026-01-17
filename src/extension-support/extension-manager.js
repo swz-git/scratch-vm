@@ -241,22 +241,24 @@ class ExtensionManager {
             this._finishedLoadingExtensionScript();
             return;
         }
+        
+        throw new Error(`Loading extensions in workers/iframes is unsupported`);
 
-        /* eslint-disable max-len */
-        let ExtensionWorker;
-        if (sandboxMode === 'worker') {
-            ExtensionWorker = require('worker-loader?name=js/extension-worker/extension-worker.[hash].js!./extension-worker');
-        } else if (sandboxMode === 'iframe') {
-            ExtensionWorker = (await import(/* webpackChunkName: "iframe-extension-worker" */ './tw-iframe-extension-worker')).default;
-        } else {
-            throw new Error(`Invalid sandbox mode: ${sandboxMode}`);
-        }
-        /* eslint-enable max-len */
+        // /* eslint-disable max-len */
+        // let ExtensionWorker;
+        // if (sandboxMode === 'worker') {
+        //     ExtensionWorker = require('worker-loader?name=js/extension-worker/extension-worker.[hash].js!./extension-worker');
+        // } else if (sandboxMode === 'iframe') {
+        //     ExtensionWorker = (await import(/* webpackChunkName: "iframe-extension-worker" */ './tw-iframe-extension-worker')).default;
+        // } else {
+        //     throw new Error(`Invalid sandbox mode: ${sandboxMode}`);
+        // }
+        // /* eslint-enable max-len */
 
-        return new Promise((resolve, reject) => {
-            this.pendingExtensions.push({extensionURL: rewritten, resolve, reject});
-            dispatch.addWorker(new ExtensionWorker());
-        }).catch(error => this._failedLoadingExtensionScript(error));
+        // return new Promise((resolve, reject) => {
+        //     this.pendingExtensions.push({extensionURL: rewritten, resolve, reject});
+        //     dispatch.addWorker(new ExtensionWorker());
+        // }).catch(error => this._failedLoadingExtensionScript(error));
     }
 
     /**
