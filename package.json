@@ -9,7 +9,7 @@
         "type": "git",
         "url": "https://github.com/scratchfoundation/scratch-vm.git"
     },
-    "main": "./dist/scratch-vm.js",
+    "main": "./dist/node/scratch-vm.js",
     "files": [
         "dist"
     ],
