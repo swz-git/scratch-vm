@@ -1,7 +1,7 @@
 const StringUtil = require('../util/string-util');
 const log = require('../util/log');
 const AsyncLimiter = require('../util/async-limiter');
-// const {loadSvgString, serializeSvgToString} = require('@turbowarp/scratch-svg-renderer');
+const {loadSvgString, serializeSvgToString} = require('@turbowarp/scratch-svg-renderer');
 const {parseVectorMetadata} = require('../serialization/tw-costume-import-export');
 
 const loadVector_ = function (costume, runtime, rotationCenter, optVersion) {
@@ -22,8 +22,7 @@ const loadVector_ = function (costume, runtime, rotationCenter, optVersion) {
         if (optVersion && optVersion === 2) {
             // scratch-svg-renderer fixes syntax that causes loading issues,
             // and if optVersion is 2, fixes "quirks" associated with Scratch 2 SVGs,
-            throw new Error("Cannot fix svg strings due to scratch-svg-renderer being removed");
-            // const fixedSvgString = serializeSvgToString(loadSvgString(svgString, true /* fromVersion2 */));
+            const fixedSvgString = serializeSvgToString(loadSvgString(svgString, true /* fromVersion2 */));
 
             // If the string changed, put back into storage
             if (svgString !== fixedSvgString) {
