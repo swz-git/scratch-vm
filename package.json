@@ -10,6 +10,9 @@
         "url": "https://github.com/scratchfoundation/scratch-vm.git"
     },
     "main": "./dist/scratch-vm.js",
+    "files": [
+        "dist"
+    ],
     "browser": "./src/index.js",
     "scripts": {
         "build": "webpack --progress --colors --bail",
