@@ -9,13 +9,13 @@
 
 let _TextEncoder;
 let _TextDecoder;
-if (typeof TextEncoder === 'undefined') {
-    _TextEncoder = require('text-encoding').TextEncoder;
-    _TextDecoder = require('text-encoding').TextDecoder;
-} else {
+// if (typeof TextEncoder === 'undefined') {
+//     _TextEncoder = require('text-encoding').TextEncoder;
+//     _TextDecoder = require('text-encoding').TextDecoder;
+// } else {
     _TextEncoder = TextEncoder;
     _TextDecoder = TextDecoder;
-}
+// }
 
 // Using literal HTML comments tokens will cause this script to be very hard to inline in
 // a <script> element, so we'll instead do this terrible hack which the minifier probably
