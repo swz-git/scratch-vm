@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@babel/core':
+        specifier: 7.13.10
+        version: 7.13.10
+      '@babel/preset-env':
+        specifier: 7.14.8
+        version: 7.14.8(@babel/core@7.13.10)
       '@turbowarp/json':
         specifier: ^0.1.2
         version: 0.1.2
@@ -29,64 +35,97 @@ importers:
       atob:
         specifier: 2.1.2
         version: 2.1.2
+      babel-loader:
+        specifier: 8.2.2
+        version: 8.2.2(@babel/core@7.13.10)(webpack@4.47.0)
       btoa:
         specifier: 1.2.1
         version: 1.2.1
       canvas-toBlob:
         specifier: 1.0.0
         version: 1.0.0
+      copy-webpack-plugin:
+        specifier: 4.5.4
+        version: 4.5.4
+      cross-env:
+        specifier: ^10.1.0
+        version: 10.1.0
       decode-html:
         specifier: 2.0.0
         version: 2.0.0
       diff-match-patch:
         specifier: 1.0.4
         version: 1.0.4
+      expose-loader:
+        specifier: 0.7.5
+        version: 0.7.5(webpack@4.47.0)
+      file-loader:
+        specifier: 2.0.0
+        version: 2.0.0(webpack@4.47.0)
       format-message:
         specifier: 6.2.1
         version: 6.2.1
       htmlparser2:
         specifier: 3.10.0
         version: 3.10.0
+      lodash.defaultsdeep:
+        specifier: 4.6.1
+        version: 4.6.1
+      scratch-audio:
+        specifier: 0.1.0-prerelease.20231221012053
+        version: 0.1.0-prerelease.20231221012053
+      scratch-blocks:
+        specifier: 0.1.0-prerelease.20230527085947
+        version: 0.1.0-prerelease.20230527085947
+      scratch-l10n:
+        specifier: 3.16.20231222031921
+        version: 3.16.20231222031921
       scratch-parser:
         specifier: github:TurboWarp/scratch-parser#master
         version: https://codeload.github.com/TurboWarp/scratch-parser/tar.gz/5e21d953d58d92672956030b9f93402f11249c96
+      scratch-render:
+        specifier: 0.1.0-prerelease.20231220210403
+        version: 0.1.0-prerelease.20231220210403(scratch-render-fonts@https://codeload.github.com/TurboWarp/scratch-render-fonts/tar.gz/7b6768fc6dfef6b343a06f992587b74807043961)(webpack@4.47.0)
+      scratch-render-fonts:
+        specifier: github:TurboWarp/scratch-render-fonts#master
+        version: https://codeload.github.com/TurboWarp/scratch-render-fonts/tar.gz/7b6768fc6dfef6b343a06f992587b74807043961
       scratch-sb1-converter:
         specifier: 0.2.7
         version: 0.2.7
+      scratch-storage:
+        specifier: 2.3.1
+        version: 2.3.1(webpack@4.47.0)
       scratch-translate-extension-languages:
         specifier: ^1.0.7
         version: 1.0.7
       text-encoding:
         specifier: 0.7.0
         version: 0.7.0
+      uglifyjs-webpack-plugin:
+        specifier: 1.2.7
+        version: 1.2.7(webpack@4.47.0)
       uuid:
         specifier: 8.3.2
         version: 8.3.2
+      webpack:
+        specifier: 4.47.0
+        version: 4.47.0(webpack-cli@3.1.0)
+      webpack-cli:
+        specifier: 3.1.0
+        version: 3.1.0(webpack@4.47.0)
       worker-loader:
         specifier: ^1.1.1
         version: 1.1.1(webpack@4.47.0)
     devDependencies:
-      '@babel/core':
-        specifier: 7.13.10
-        version: 7.13.10
-      '@babel/preset-env':
-        specifier: 7.14.8
-        version: 7.14.8(@babel/core@7.13.10)
       adm-zip:
         specifier: 0.4.11
         version: 0.4.11
       babel-eslint:
         specifier: 10.1.0
         version: 10.1.0(eslint@8.55.0)
-      babel-loader:
-        specifier: 8.2.2
-        version: 8.2.2(@babel/core@7.13.10)(webpack@4.47.0)
       callsite:
         specifier: 1.0.0
         version: 1.0.0
-      copy-webpack-plugin:
-        specifier: 4.5.4
-        version: 4.5.4
       docdash:
         specifier: 1.2.0
         version: 1.2.0
@@ -96,12 +135,6 @@ importers:
       eslint-config-scratch:
         specifier: 9.0.3
         version: 9.0.3(@babel/eslint-parser@7.28.6(@babel/core@7.13.10)(eslint@8.55.0))(eslint@8.55.0)
-      expose-loader:
-        specifier: 0.7.5
-        version: 0.7.5(webpack@4.47.0)
-      file-loader:
-        specifier: 2.0.0
-        version: 2.0.0(webpack@4.47.0)
       format-message-cli:
         specifier: 6.2.0
         version: 6.2.0
@@ -117,30 +150,9 @@ importers:
       json:
         specifier: ^9.0.4
         version: 9.0.6
-      lodash.defaultsdeep:
-        specifier: 4.6.1
-        version: 4.6.1
       pngjs:
         specifier: 3.3.3
         version: 3.3.3
-      scratch-audio:
-        specifier: 0.1.0-prerelease.20231221012053
-        version: 0.1.0-prerelease.20231221012053
-      scratch-blocks:
-        specifier: 0.1.0-prerelease.20230527085947
-        version: 0.1.0-prerelease.20230527085947
-      scratch-l10n:
-        specifier: 3.16.20231222031921
-        version: 3.16.20231222031921
-      scratch-render:
-        specifier: 0.1.0-prerelease.20231220210403
-        version: 0.1.0-prerelease.20231220210403(scratch-render-fonts@https://codeload.github.com/TurboWarp/scratch-render-fonts/tar.gz/7b6768fc6dfef6b343a06f992587b74807043961)(webpack@4.47.0)
-      scratch-render-fonts:
-        specifier: github:TurboWarp/scratch-render-fonts#master
-        version: https://codeload.github.com/TurboWarp/scratch-render-fonts/tar.gz/7b6768fc6dfef6b343a06f992587b74807043961
-      scratch-storage:
-        specifier: 2.3.1
-        version: 2.3.1(webpack@4.47.0)
       script-loader:
         specifier: 0.7.2
         version: 0.7.2
@@ -153,15 +165,6 @@ importers:
       tiny-worker:
         specifier: 2.3.0
         version: 2.3.0
-      uglifyjs-webpack-plugin:
-        specifier: 1.2.7
-        version: 1.2.7(webpack@4.47.0)
-      webpack:
-        specifier: 4.47.0
-        version: 4.47.0(webpack-cli@3.1.0)
-      webpack-cli:
-        specifier: 3.1.0
-        version: 3.1.0(webpack@4.47.0)
       webpack-dev-server:
         specifier: 3.11.2
         version: 3.11.2(webpack-cli@3.1.0)(webpack@4.47.0)
@@ -702,6 +705,9 @@ packages:
   '@babel/types@7.28.6':
     resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
+
+  '@epic-web/invariant@1.0.0':
+    resolution: {integrity: sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==}
 
   '@eslint-community/eslint-utils@4.9.1':
     resolution: {integrity: sha512-phrYmNiYppR7znFEdqgfWHXR6NCkZEK7hwWDHZUjit/2/U0r6XvkDl0SYnoM51Hq7FhCGdLDT6zxCCOY1hexsQ==}
@@ -1643,6 +1649,11 @@ packages:
 
   create-hmac@1.1.7:
     resolution: {integrity: sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==}
+
+  cross-env@10.1.0:
+    resolution: {integrity: sha512-GsYosgnACZTADcmEyJctkJIoqAhHjttw7RsFrVoJNXbsWWqaq6Ym+7kZjq6mS45O0jij6vtiReppKQEtqWy6Dw==}
+    engines: {node: '>=20'}
+    hasBin: true
 
   cross-fetch@3.1.5:
     resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
@@ -6068,6 +6079,8 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
+  '@epic-web/invariant@1.0.0': {}
+
   '@eslint-community/eslint-utils@4.9.1(eslint@8.55.0)':
     dependencies:
       eslint: 8.55.0
@@ -7217,6 +7230,11 @@ snapshots:
       ripemd160: 2.0.3
       safe-buffer: 5.2.1
       sha.js: 2.4.12
+
+  cross-env@10.1.0:
+    dependencies:
+      '@epic-web/invariant': 1.0.0
+      cross-spawn: 7.0.6
 
   cross-fetch@3.1.5:
     dependencies:
