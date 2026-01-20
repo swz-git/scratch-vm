@@ -13,7 +13,6 @@
     "files": [
         "dist"
     ],
-    "browser": "./src/index.js",
     "scripts": {
         "build": "webpack --progress --colors --bail",
         "coverage": "tap ./test/{unit,integration}/*.js --coverage --coverage-report=lcov",
