@@ -57,7 +57,7 @@ module.exports = [
     // }),
     // Node-compatible
     defaultsDeep({}, base, {
-        target: 'node',
+        target: 'web',
         entry: {
             'scratch-vm': './src/index.js'
         },
@@ -72,7 +72,15 @@ module.exports = [
             // 'scratch-parser': true,
             // 'socket.io-client': true,
             // 'text-encoding': true
-        }
+        },
+        // module: {
+        //     rules: base.module.rules.concat([
+        //         {
+        //             test: require.resolve('./src/index.js'),
+        //             loader: 'expose-loader?VirtualMachine'
+        //         }
+        //     ])
+        // }
     }),
     // Playground
     // defaultsDeep({}, base, {
